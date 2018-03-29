@@ -3,20 +3,6 @@
 	<title>Registro - Admin Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- bootstrap-css -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- //bootstrap-css -->
-	<!-- Custom CSS -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<!-- font CSS -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<!-- font-awesome icons -->
-	<link rel="stylesheet" href="css/font.css" type="text/css"/>
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<!-- //font-awesome icons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="assets/favico/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="assets/favico/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="assets/favico/apple-icon-72x72.png">
@@ -26,31 +12,71 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="assets/favico/apple-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="assets/favico/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favico/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/favico/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favico/favicon-16x16.png">
 	<link rel="manifest" href="assets/favico/manifest.json">
 	<meta name="msapplication-TileImage" content="assets/favico/ms-icon-144x144.png">
+	<style>
+		.container {
+			border-radius: 20px;
+			border-style:solid;
+			border-width: 5px;
+			border-color: cyan;
+			background-color:black;
+			padding: 100px;
+			margin-top: 100px;
+			margin-left: 500px;
+			margin-right: 500px;
+		}
+
+		.button {
+			padding: 7px;
+			width: 100px;
+			border-radius: 20px;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+
+		.button2 {
+			padding: 7px;
+			width: 75px;
+			border-radius: 20px;
+			margin-left: 24px;
+			margin-top: 30px;
+		}
+
+		.login {
+			border-style: solid;
+			border-width: 5px;
+			border-color: cyan;
+			padding: 7px;
+			margin-left: au;
+			margin-bottom: 10px;
+			border-radius: 20px
+		}
+	</style>
 </head>
-<body class="signup-body">
-	<div class="agile-signup">
-		<div class="content2">
-			<div class="grids-heading gallery-heading signup-heading">
-				<h2>Registrar</h2>
-			</div>
-			<form>
-				<input type="text" name="Username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
-				<input type="tel" name="Phone" value="Número" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">
-				<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-				<input type="password" name="Password" value="Senha" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
-				<input type="submit" class="register" value="Registrar">
-			</form>
-			<a href="../index.html">Voltar ao início</a>
-		</div>
+<body class="signup-body" background="images/s1.jpg">
+		<form action="#" method="post" class="container">
+				<div style="font-size:50px; font-family:'Courier New', Courier, monospace; margin-top:-120px; margin-left:-80px; color:white">
+					<p>Registrar</p>
+				</div>
+				<input class="login" type="text" name="Username" placeholder="Usuário" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
+				<input class="login" type="tel" name="Phone" placeholder="Número" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">
+				<input class="login" type="email" name="Email" placeholder="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+				<input class="login" type="password" name="Password" placeholder="Senha" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+			<button class="button">
+				<a style="font-size:20px" class="register" type="submit" value="Registrar">Registrar</a>
+			</button>
+			<button class="button2">
+				<a href="#">Voltar</a>
+			</button>
+		</form>
 		<!-- footer -->
-		<div class="copyright">
-			<p>wtfvitu &copy; 2017</p>
+		<div style="color: white" class="copyright">
+			<p>Dicer &copy; 2018</p>
 		</div>
 		<!-- //footer -->
 	</div>

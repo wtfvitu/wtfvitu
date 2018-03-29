@@ -1,0 +1,403 @@
+[1mdiff --git a/admin/charts.html b/admin/charts.html[m
+[1mindex 0e9243b..6fe966b 100644[m
+[1m--- a/admin/charts.html[m
+[1m+++ b/admin/charts.html[m
+[36m@@ -28,9 +28,6 @@[m
+ 			if (!screenfull.enabled) {[m
+ 				return false;[m
+ 			}[m
+[31m-		[m
+[31m-			[m
+[31m-		[m
+ 			$('#toggle').click(function () {[m
+ 				screenfull.toggle($('#container')[0]);[m
+ 			});	[m
+[1mdiff --git a/admin/images/s1.jpg b/admin/images/s1.jpg[m
+[1mindex 478cee5..ca27871 100644[m
+Binary files a/admin/images/s1.jpg and b/admin/images/s1.jpg differ
+[1mdiff --git a/admin/index.html b/admin/index.html[m
+[1mindex b8c4b35..de121d8 100644[m
+[1m--- a/admin/index.html[m
+[1m+++ b/admin/index.html[m
+[36m@@ -99,6 +99,45 @@[m
+ 		article p {line-height: 30px; font-size:20px; margin-top:15px;}[m
+ 		article p a {color:#FFF; text-decoration:none; font-size:30px;}[m
+ 	</style>[m
+[32m+[m	[32m<style>[m
+[32m+[m		[32m* {margin:0; padding: 0;}[m
+[32m+[m		[32mhtml, body {height:100%;}[m
+[32m+[m
+[32m+[m		[32m/** formata elementos que tem backgrounds parallax **/[m
+[32m+[m		[32m.bgParallax {[m
+[32m+[m			[32mmargin: 0 auto;[m
+[32m+[m			[32mwidth: 100%;[m
+[32m+[m			[32mmax-width: 1920px;[m
+[32m+[m			[32mposition: relative;[m
+[32m+[m			[32mmin-height: 100%;[m
+[32m+[m			[32mtext-shadow:0 0 10px rgba(0,0,0,0.7);[m
+[32m+[m
+[32m+[m			[32mbackground-position: 50% 0;[m
+[32m+[m			[32mbackground-repeat: repeat;[m
+[32m+[m			[32mbackground-attachment: fixed;[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m/* Define backgrounds dos divs[m
+[32m+[m			[32m-webkit-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);[m
+[32m+[m			[32m-moz-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);[m
+[32m+[m			[32m-ms-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);[m
+[32m+[m			[32m-o-box-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);[m
+[32m+[m			[32mbox-shadow:-20px 0 20px 5px rgba(0,0,0,0.7);[m
+[32m+[m		[32m} */[m
+[32m+[m
+[32m+[m		[32m/** Formata o article que vai o texto **/[m
+[32m+[m		[32m.bgParallax article {[m
+[32m+[m		[32m  width: 70%;[m
+[32m+[m		[32m  text-align: center;[m
+[32m+[m		[32m  margin:0 auto;[m
+[32m+[m		[32m  padding:20% 0 0;[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m/** formata texto **/[m
+[32m+[m		[32marticle h1 {font-size:40px;}[m
+[32m+[m		[32marticle p {line-height: 30px; font-size:20px; margin-top:15px;}[m
+[32m+[m		[32marticle p a {color:#FFF; text-decoration:none; font-size:30px;}[m
+[32m+[m	[32m</style>[m
+ <body class="dashboard-page">[m
+ 	<script>[m
+ 		var theme = $.cookie('protonTheme') || 'default';[m
+[36m@@ -150,7 +189,7 @@[m
+ 			<i class="icon-reorder"></i>[m
+ 			</a>[m
+ 		</nav>[m
+[31m-		<section class="title-bar">[m
+[32m+[m		[32m<section class="title-bar bg-dark">[m
+ 			<div class="logo">[m
+ 				<h1><a href="index.html"><img src="assets/img/favicon.png" width="60px" alt="" />wtfvitu</a></h1>[m
+ 			</div>[m
+[36m@@ -329,7 +368,7 @@[m
+ 			</div>[m
+ 			<div class="clearfix"> </div>[m
+ 		</section>[m
+[31m-		<div class="main-grid">[m
+[32m+[m		[32m<div background="assets/img/pulse.jpg" class="main-grid bgParallax">[m
+ 			<div class="social grid">[m
+ 				<div class="grid-info">[m
+ 					<div class="col-md-3 top-comment-grid">[m
+[36m@@ -375,7 +414,7 @@[m
+ 							</div>[m
+ 							<div class="comments-info">[m
+ 								<h3>668</h3>[m
+[31m-								<a href="https://www.instagram.com/wtfvitu_">Comentários</a>[m
+[32m+[m								[32m<a href="#">Commissions</a>[m
+ 							</div>[m
+ 							<div class="clearfix"> </div>[m
+ 						</div>[m
+[36m@@ -513,9 +552,7 @@[m
+ 								offset: -8,[m
+ 								day: 'Dia',[m
+ 								days: 'Dias'[m
+[31m-							}, function () {[m
+[31m-								alert('Done!');[m
+[31m-							});[m
+[32m+[m							[32m}[m
+ 						</script>[m
+ 					</div>[m
+ 				</div>[m
+[36m@@ -523,7 +560,7 @@[m
+ 		</div>[m
+ 		<div class="clearfix"> </div>[m
+ 		<!-- footer -->[m
+[31m-		<div class="footer">[m
+[32m+[m		[32m<div class="footer bg-dark">[m
+ 			<p>wtfvitu &copy; 2017</p>[m
+ 		</div>[m
+ 		<!-- //footer -->[m
+[1mdiff --git a/admin/login.html b/admin/login.html[m
+[1mindex 1e71a05..28a0ef5 100644[m
+[1m--- a/admin/login.html[m
+[1m+++ b/admin/login.html[m
+[36m@@ -1,68 +1,79 @@[m
+[31m-﻿<!DOCTYPE html>[m
+[31m-<head>[m
+[31m-	<title>Login - Admin Page</title>[m
+[31m-	<meta name="viewport" content="width=device-width, initial-scale=1">[m
+[31m-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />[m
+[31m-	<meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, [m
+[31m-		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />[m
+[31m-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>[m
+[31m-	<!-- bootstrap-css -->[m
+[31m-	<link rel="stylesheet" href="css/bootstrap.css">[m
+[31m-	<!-- //bootstrap-css -->[m
+[31m-	<!-- Custom CSS -->[m
+[31m-	<link href="css/style.css" rel='stylesheet' type='text/css' />[m
+[31m-	<!-- font CSS -->[m
+[31m-	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>[m
+[31m-	<!-- font-awesome icons -->[m
+[31m-	<link rel="stylesheet" href="css/font.css" type="text/css"/>[m
+[31m-	<link href="css/font-awesome.css" rel="stylesheet">[m
+[31m-	<!-- //font-awesome icons -->[m
+[31m-	<link rel="apple-touch-icon" sizes="57x57" href="assets/favico/apple-icon-57x57.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="60x60" href="assets/favico/apple-icon-60x60.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="72x72" href="assets/favico/apple-icon-72x72.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="76x76" href="assets/favico/apple-icon-76x76.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="114x114" href="assets/favico/apple-icon-114x114.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="120x120" href="assets/favico/apple-icon-120x120.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="144x144" href="assets/favico/apple-icon-144x144.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="152x152" href="assets/favico/apple-icon-152x152.png">[m
+[31m-	<link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-icon-180x180.png">[m
+[31m-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">[m
+[31m-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favico/favicon-32x32.png">[m
+[31m-	<link rel="icon" type="image/png" sizes="96x96" href="assets/favico/favicon-96x96.png">[m
+[31m-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favico/favicon-16x16.png">[m
+[31m-	<link rel="manifest" href="assets/favico/manifest.json">[m
+[31m-	<meta name="msapplication-TileImage" content="assets/favico/ms-icon-144x144.png">[m
+[31m-</head>[m
+[31m-<body class="signup-body">[m
+[31m-	<div class="agile-signup">[m
+[31m-		<div class="content2">[m
+[31m-			<div class="grids-heading gallery-heading signup-heading">[m
+[31m-				<h2>Login</h2>[m
+[32m+[m[32m﻿<DOCTYPE html>[m
+[32m+[m
+[32m+[m	[32m<head>[m
+[32m+[m		[32m<title>Login - Admin Page</title>[m
+[32m+[m		[32m<meta name="viewport" content="width=device-width, initial-scale=1">[m
+[32m+[m		[32m<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="57x57" href="assets/favico/apple-icon-57x57.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="60x60" href="assets/favico/apple-icon-60x60.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="72x72" href="assets/favico/apple-icon-72x72.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="76x76" href="assets/favico/apple-icon-76x76.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="114x114" href="assets/favico/apple-icon-114x114.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="120x120" href="assets/favico/apple-icon-120x120.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="144x144" href="assets/favico/apple-icon-144x144.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="152x152" href="assets/favico/apple-icon-152x152.png">[m
+[32m+[m		[32m<link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-icon-180x180.png">[m
+[32m+[m		[32m<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">[m
+[32m+[m		[32m<link rel="icon" type="image/png" sizes="32x32" href="assets/favico/favicon-32x32.png">[m
+[32m+[m		[32m<link rel="icon" type="image/png" sizes="96x96" href="assets/favico/favicon-96x96.png">[m
+[32m+[m		[32m<link rel="icon" type="image/png" sizes="16x16" href="assets/favico/favicon-16x16.png">[m
+[32m+[m		[32m<link rel="manifest" href="assets/favico/manifest.json">[m
+[32m+[m		[32m<meta name="msapplication-TileImage" content="assets/favico/ms-icon-144x144.png">[m
+[32m+[m		[32m<style>[m
+[32m+[m			[32m.container {[m
+[32m+[m				[32mborder-radius: 20px;[m
+[32m+[m				[32mbackground-color: darkcyan;[m
+[32m+[m				[32mpadding: 100px;[m
+[32m+[m				[32mmargin-top: 150px;[m
+[32m+[m				[32mmargin-left: 500px;[m
+[32m+[m				[32mmargin-right: 500px;[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32m.button {[m
+[32m+[m				[32mpadding: 7px;[m
+[32m+[m				[32mwidth: 100px;[m
+[32m+[m				[32mborder-radius: 20px;[m
+[32m+[m				[32mmargin-left: 20px;[m
+[32m+[m				[32mmargin-top: 10px;[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32m.button2 {[m
+[32m+[m				[32mpadding: 7px;[m
+[32m+[m				[32mwidth: 75px;[m
+[32m+[m				[32mborder-radius: 20px;[m
+[32m+[m				[32mmargin-left: 34px;[m
+[32m+[m				[32mmargin-top: 30px;[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32m.login {[m
+[32m+[m				[32mpadding: 7px;[m
+[32m+[m				[32mmargin-left: -20px;[m
+[32m+[m				[32mmargin-bottom: 10px;[m
+[32m+[m				[32mborder-radius: 20px[m
+[32m+[m			[32m}[m
+[32m+[m		[32m</style>[m
+[32m+[m	[32m</head>[m
+[32m+[m	[32m<body background="images/s1.jpg">[m
+[32m+[m		[32m<form action="#" method="post" class="container">[m
+[32m+[m			[32m<div style="font-size:50px; font-family:'Courier New', Courier, monospace; margin-top:-125px">[m
+[32m+[m				[32m<p>Login</p>[m
+ 			</div>[m
+[31m-			<form action="javascript:redirectToIndex()" method="post">[m
+[31m-				<input type="text" name="Username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">[m
+[31m-				<input type="password" name="Password" value="Senha" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">[m
+[31m-				<input type="submit" class="register" value="Login">[m
+[31m-			</form>[m
+[31m-			<div class="signin-text">[m
+[31m-				<div class="text-left">[m
+[31m-					<p><a href="#"> Esqueci a senha </a></p>[m
+[31m-				</div>[m
+[31m-				<div class="clearfix"> </div>[m
+[31m-			</div>[m
+[31m-			<a href="../index.html">Voltar ao início</a>[m
+[31m-		</div>[m
+[31m-		<!-- footer -->[m
+[31m-		<div class="copyright">[m
+[31m-			<p>wtfvitu &copy; 2017</p>[m
+[32m+[m			[32m<input class="login" type="text" name="Username" placeholder="Usuário">[m
+[32m+[m			[32m<input class="login" type="password" name="Password" placeholder="Senha">[m
+[32m+[m			[32m<button class="button">[m
+[32m+[m				[32m<a style="font-size:20px">Login</a>[m
+[32m+[m			[32m</button>[m
+[32m+[m			[32m<button class="button2">[m
+[32m+[m				[32m<a href="#">Voltar</a>[m
+[32m+[m			[32m</button>[m
+[32m+[m		[32m</form>[m
+[32m+[m		[32m<div style="color: white" class="copyright">[m
+[32m+[m			[32m<p>Dicer &copy; 2018</p>[m
+ 		</div>[m
+[31m-		<!-- //footer -->[m
+[31m-	</div>[m
+[31m-	<script src="js/proton.js"></script>[m
+[32m+[m	[32m</body>[m
+ 	<script>[m
+ 		function redirectToIndex() {[m
+[31m-			window.location.href = "index.html";[m
+[32m+[m			[32mwindow.location.href = "#";[m
+ 		}[m
+ 	</script>[m
+[31m-</body>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[32m+[m	[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/admin/signup.html b/admin/signup.html[m
+[1mindex 3a56b8a..76a53e2 100644[m
+[1m--- a/admin/signup.html[m
+[1m+++ b/admin/signup.html[m
+[36m@@ -3,20 +3,6 @@[m
+ 	<title>Registro - Admin Page</title>[m
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">[m
+ 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />[m
+[31m-	<meta name="keywords" content="Colored Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, [m
+[31m-		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />[m
+[31m-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>[m
+[31m-	<!-- bootstrap-css -->[m
+[31m-	<link rel="stylesheet" href="css/bootstrap.css">[m
+[31m-	<!-- //bootstrap-css -->[m
+[31m-	<!-- Custom CSS -->[m
+[31m-	<link href="css/style.css" rel='stylesheet' type='text/css' />[m
+[31m-	<!-- font CSS -->[m
+[31m-	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>[m
+[31m-	<!-- font-awesome icons -->[m
+[31m-	<link rel="stylesheet" href="css/font.css" type="text/css"/>[m
+[31m-	<link href="css/font-awesome.css" rel="stylesheet">[m
+[31m-	<!-- //font-awesome icons -->[m
+ 	<link rel="apple-touch-icon" sizes="57x57" href="assets/favico/apple-icon-57x57.png">[m
+ 	<link rel="apple-touch-icon" sizes="60x60" href="assets/favico/apple-icon-60x60.png">[m
+ 	<link rel="apple-touch-icon" sizes="72x72" href="assets/favico/apple-icon-72x72.png">[m
+[36m@@ -26,31 +12,71 @@[m
+ 	<link rel="apple-touch-icon" sizes="144x144" href="assets/favico/apple-icon-144x144.png">[m
+ 	<link rel="apple-touch-icon" sizes="152x152" href="assets/favico/apple-icon-152x152.png">[m
+ 	<link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-icon-180x180.png">[m
+[31m-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">[m
+[32m+[m	[32m<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">[m
+ 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favico/favicon-32x32.png">[m
+ 	<link rel="icon" type="image/png" sizes="96x96" href="assets/favico/favicon-96x96.png">[m
+ 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favico/favicon-16x16.png">[m
+ 	<link rel="manifest" href="assets/favico/manifest.json">[m
+ 	<meta name="msapplication-TileImage" content="assets/favico/ms-icon-144x144.png">[m
+[32m+[m	[32m<style>[m
+[32m+[m		[32m.container {[m
+[32m+[m			[32mborder-radius: 20px;[m
+[32m+[m			[32mborder-style:solid;[m
+[32m+[m			[32mborder-width: 5px;[m
+[32m+[m			[32mborder-color: cyan;[m
+[32m+[m			[32mbackground-color:black;[m
+[32m+[m			[32mpadding: 100px;[m
+[32m+[m			[32mmargin-top: 100px;[m
+[32m+[m			[32mmargin-left: 500px;[m
+[32m+[m			[32mmargin-right: 500px;[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m.button {[m
+[32m+[m			[32mpadding: 7px;[m
+[32m+[m			[32mwidth: 100px;[m
+[32m+[m			[32mborder-radius: 20px;[m
+[32m+[m			[32mmargin-left: 10px;[m
+[32m+[m			[32mmargin-top: 10px;[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m.button2 {[m
+[32m+[m			[32mpadding: 7px;[m
+[32m+[m			[32mwidth: 75px;[m
+[32m+[m			[32mborder-radius: 20px;[m
+[32m+[m			[32mmargin-left: 24px;[m
+[32m+[m			[32mmargin-top: 30px;[m
+[32m+[m		[32m}[m
+[32m+[m
+[32m+[m		[32m.login {[m
+[32m+[m			[32mborder-style: solid;[m
+[32m+[m			[32mborder-width: 5px;[m
+[32m+[m			[32mborder-color: cyan;[m
+[32m+[m			[32mpadding: 7px;[m
+[32m+[m			[32mmargin-left: au;[m
+[32m+[m			[32mmargin-bottom: 10px;[m
+[32m+[m			[32mborder-radius: 20px[m
+[32m+[m		[32m}[m
+[32m+[m	[32m</style>[m
+ </head>[m
+[31m-<body class="signup-body">[m
+[31m-	<div class="agile-signup">[m
+[31m-		<div class="content2">[m
+[31m-			<div class="grids-heading gallery-heading signup-heading">[m
+[31m-				<h2>Registrar</h2>[m
+[31m-			</div>[m
+[31m-			<form>[m
+[31m-				<input type="text" name="Username" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">[m
+[31m-				<input type="tel" name="Phone" value="Número" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">[m
+[31m-				<input type="email" name="Email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">[m
+[31m-				<input type="password" name="Password" value="Senha" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">[m
+[31m-				<input type="submit" class="register" value="Registrar">[m
+[31m-			</form>[m
+[31m-			<a href="../index.html">Voltar ao início</a>[m
+[31m-		</div>[m
+[32m+[m[32m<body class="signup-body" background="images/s1.jpg">[m
+[32m+[m		[32m<form action="#" method="post" class="container">[m
+[32m+[m				[32m<div style="font-size:50px; font-family:'Courier New', Courier, monospace; margin-top:-120px; margin-left:-80px; color:white">[m
+[32m+[m					[32m<p>Registrar</p>[m
+[32m+[m				[32m</div>[m
+[32m+[m				[32m<input class="login" type="text" name="Username" placeholder="Usuário" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">[m
+[32m+[m				[32m<input class="login" type="tel" name="Phone" placeholder="Número" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">[m
+[32m+[m				[32m<input class="login" type="email" name="Email" placeholder="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">[m
+[32m+[m				[32m<input class="login" type="password" name="Password" placeholder="Senha" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">[m
+[32m+[m			[32m<button class="button">[m
+[32m+[m				[32m<a style="font-size:20px" class="register" type="submit" value="Registrar">Registrar</a>[m
+[32m+[m			[32m</button>[m
+[32m+[m			[32m<button class="button2">[m
+[32m+[m				[32m<a href="#">Voltar</a>[m
+[32m+[m			[32m</button>[m
+[32m+[m		[32m</form>[m
+ 		<!-- footer -->[m
+[31m-		<div class="copyright">[m
+[31m-			<p>wtfvitu &copy; 2017</p>[m
+[32m+[m		[32m<div style="color: white" class="copyright">[m
+[32m+[m			[32m<p>Dicer &copy; 2018</p>[m
+ 		</div>[m
+ 		<!-- //footer -->[m
+ 	</div>[m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex e17c273..3fc1e98 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -152,6 +152,7 @@[m
+ 		<section id="fotos">[m
+ 			<div class="w3-row-padding" id="myGrid" style="margin-top:128px">[m
+ 				<div class="w3-third">[m
+[32m+[m					[32m<img id="img11" src="assets/img/mblond.png" onclick="openModal() ;currentSlide(11)" style="width:100%">[m
+ 					<img id="img1" src="assets/img/img1.jpg" onclick="openModal() ;currentSlide(1)" style="width:100%">[m
+ 					<img id="img4" src="assets/img/img2.jpg" onclick="openModal() ;currentSlide(4)" style="width:100%">[m
+ 				</div>[m
+[36m@@ -175,11 +176,11 @@[m
+ 				<p><b>Sobre mim</b></p>[m
+ 			</div>[m
+ 			<div class="w3-center w3-margin-bottom fa-1x">    [m
+[31m-				<img class="rounded-circle" src="assets/img/IMG_001.jpg" width="309px" alt="">[m
+[32m+[m				[32m<img class="rounded-circle" style="text-shadow: full" src="assets/img/IMG_000.png" width="309px" alt="">[m
+ 			</div>[m
+ 			<div class="w3-center">[m
+ 				<h2 class="w3-xxlarge w3-text-blue"><b>Vitor Kainan</b></h2>[m
+[31m-				<p class="w3-large w3-text-white">Universitário, fã de anime, geek e faço uns desenho loco nas horas vagas.</p>[m
+[32m+[m				[32m<p class="w3-large w3-text-white">Ohayoooo!!<br>My name is Vitor, I'm a freelancer illustrator, <br>programmer in free hours and fan of animes and Star Wars.</p>[m
+ 			</div>[m
+ 			<div class="w3-center">[m
+ 				<p class="w3-large w3-text-light-gray"><b>Siga-me nas redes sociais</b></p>[m
