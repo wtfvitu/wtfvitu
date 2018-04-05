@@ -1,0 +1,86 @@
+  @font-face {
+    font-family: truelies;
+    src: url("font/True Lies.ttf");
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Lato", sans-serif;
+    color: white;
+  }
+
+  body,
+  html {
+    height: 100%;
+    line-height: 1.8;
+  }
+
+  /* Create a Parallax Effect */
+
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* First image (Logo. Full height) */
+
+  .bgimg-1 {
+    background-image: url('../img/msd2.gif');
+    min-height: 100%;
+  }
+
+  /* Second image (Portfolio) */
+
+  .bgimg-2 {
+    background-image: url("../img/pulse.jpg");
+    min-height: 400px;
+  }
+
+  /* Third image (Contact) */
+
+  .bgimg-3 {
+    background-image: url("../img/pulse.jpg");
+    min-height: 400px;
+  }
+  
+  .tl {
+    font-family: truelies;
+  }
+
+  .w3-wide {
+    letter-spacing: 10px;
+  }
+
+  .w3-hover-opacity {
+    cursor: pointer;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones */
+
+  @media only screen and (max-device-width: 1024px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
+
+  .tit {
+    text-shadow: -1px 0 black, 0 1px black,
+    1px 0 black, 0 -1px black;
+  }
+
+  .pt {
+    text-shadow: 0.2em 0.5em 0.1em black, 
+    -0.3em 0.1em 0.1em black,
+    0.4em -0.3em 0.1em black
+  }
