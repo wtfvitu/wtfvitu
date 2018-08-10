@@ -84,3 +84,8 @@
     -0.3em 0.1em 0.1em black,
     0.4em -0.3em 0.1em black
   }
+
+  a, a:hover, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
+}
